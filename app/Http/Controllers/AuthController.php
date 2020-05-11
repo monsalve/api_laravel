@@ -14,7 +14,8 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        //$this->middleware('auth:api', ['except' => ['login']]);
+        //$this->middleware('auth:api', ['except' => ['salir']]);
     }
 
     /**
@@ -50,7 +51,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
+       // auth()->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
     }
@@ -81,3 +82,4 @@ class AuthController extends Controller
         ]);
     }
 }
+   
